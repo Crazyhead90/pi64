@@ -26,6 +26,9 @@ func Finish() {
 	fmt.Println("Expanding root partition...")
 	checkError(expandRootPartition())
 
+	fmt.Println("Configuring kernel modules...")
+	checkError(configureModules())
+
 	fmt.Println("Configuring packages (this takes a few minutes)...")
 	checkError(configurePackages())
 
@@ -131,6 +134,12 @@ func configurePackages() error {
 		return err
 	}
 	return os.Remove(policyPath)
+}
+
+func configureModules() error {
+	if err := runCommand("/sbin/depmod", "-a"); err != nil {
+		return err
+	}
 }
 
 func addPiUser() error {
