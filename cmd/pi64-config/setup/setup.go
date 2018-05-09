@@ -137,9 +137,7 @@ func configurePackages() error {
 }
 
 func configureModules() error {
-	if err := runCommand("/sbin/depmod", "-a"); err != nil {
-		return err
-	}
+        return runCommand("/sbin/depmod", "-a")
 }
 
 func addPiUser() error {
