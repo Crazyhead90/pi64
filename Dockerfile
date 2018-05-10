@@ -1,4 +1,4 @@
-FROM ubuntu:17.10
+FROM debian:stretch
 
 ENV GOPATH=/go PATH=/go/bin:/usr/lib/go-1.8/bin:$PATH
 
