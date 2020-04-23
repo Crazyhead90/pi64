@@ -1,12 +1,12 @@
 # pi64
 
-pi64 is a 64-bit OS for the Raspberry Pi 3, backed by a 4.14 Linux kernel.
+pi64 is a 64-bit OS for the Raspberry Pi 3, and 3b+ backed by a 4.14 Linux kernel.
 
 It is essentially a minimalist Debian distribution shipping with systemd and a basic networking setup, just enough to let you boot and run `apt-get`!
 
 ## Releases
 
-The latest images are always available in the [releases](https://github.com/bamarni/pi64/releases) section.
+The latest images are always available in the [releases](https://github.com/Crazyhead90/pi64/releases) section.
 
 There are 2 versions : `lite` and `desktop`. The desktop version is based on [LXDE](http://lxde.org/).
 
